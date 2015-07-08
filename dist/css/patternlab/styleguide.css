@@ -3,10 +3,10 @@
     $PATTERN LAB STYLES
 \*------------------------------------*/
 /**
- * NOTE: These styles are specific to Pattern Lab and should not be modified. 
+ * NOTE: These styles are specific to Pattern Lab and should not be modified.
  * Edit all project styles in /source/css/
- * 
- * Second note: Any important declarations are to prevent brand styles from overriding style guide 
+ *
+ * Second note: Any important declarations are to prevent brand styles from overriding style guide
  */
 /*------------------------------------*\
      $CONTENTS
@@ -30,12 +30,13 @@
  * -----Icon Fonts
  */
 /*------------------------------------*\
-    $PATTERN LAB VARIABLES 
+    $PATTERN LAB VARIABLES
 \*------------------------------------*/
 /*------------------------------------*\
-    $PATTERN LAB INTERFACE 
+    $PATTERN LAB INTERFACE
 \*------------------------------------*/
-#patternlab-html, #patternlab-body {
+#patternlab-html,
+#patternlab-body {
   margin: 0;
   padding: 0;
   background: #ddd;
@@ -58,10 +59,10 @@
 }
 
 .sg-cf, .sg-pattern {
-  /**zoom: 1;*/
+  /* *zoom: 1;*/
 }
 .sg-cf:before, .sg-pattern:before, .sg-cf:after, .sg-pattern:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 .sg-cf:after, .sg-pattern:after {
@@ -69,7 +70,7 @@
 }
 
 /*------------------------------------*\
-    $PATTERN LAB HEADER 
+    $PATTERN LAB HEADER
 \*------------------------------------*/
 /* Header */
 .sg-header {
@@ -85,9 +86,10 @@
 }
 .sg-header * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
-.sg-header ul, .sg-header ol {
+.sg-header ul,
+.sg-header ol {
   padding: 0;
   margin: 0;
 }
@@ -100,11 +102,9 @@
   text-decoration: none;
   display: block;
   line-height: 1;
-  padding: 1em 0.7em;
-  -webkit-transition: background 0.1s ease-out;
-          transition: background 0.1s ease-out;
-  -webkit-transition: color 0.1s ease-out;
-          transition: color 0.1s ease-out;
+  padding: 1em .7em;
+  -webkit-transition: background 0.1s ease-out, color 0.1s ease-out;
+          transition: background 0.1s ease-out, color 0.1s ease-out;
 }
 .sg-header a:hover, .sg-header a:focus, .sg-header a.active {
   color: #fff;
@@ -190,17 +190,17 @@
   top: -2px;
   color: #808080;
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .sg-acc-handle.sg-icon:after {
-  content: "";
+  content: '';
 }
 
 .sg-header .sg-icon {
   width: auto;
   font-size: 1rem;
-  padding: 0.5rem 0.7rem;
+  padding: .5rem .7rem;
 }
 
 .sg-acc-panel {
@@ -231,9 +231,9 @@
   position: absolute;
   left: auto;
 }
-.sg-acc-panel [class^="sg-icon-"]:before {
+.sg-acc-panel [class^='sg-icon-']:before {
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: .4em;
 }
 
 /* Controls (sizing, view mode) */
@@ -259,7 +259,7 @@
 .sg-current-size {
   font-size: 70%;
   color: #808080;
-  padding: 0.85em 0.7em;
+  padding: .85em .7em;
 }
 @media all and (min-width: 53em) {
   .sg-current-size {
@@ -297,8 +297,8 @@
 }
 
 .sg-input {
-  margin: -2px 0 0 0;
-  padding: 0.1em;
+  margin: -2px 0 0;
+  padding: .1em;
   border: 0;
   border-radius: 3px;
   background: #000;
@@ -337,13 +337,13 @@
 
 .sg-checkbox:before {
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: .4em;
 }
 
 /* basic styling */
 .sg-pattern-state:before {
   margin-right: 4px;
-  content: "\2022";
+  content: '\2022';
   display: inline-block;
   margin-bottom: -4px;
   font-size: 18px;
@@ -376,15 +376,15 @@ span.sg-pattern-state:before {
 }
 
 .inprogress:before {
-  color: #FF4136 !important;
+  color: #ff4136 !important;
 }
 
 .inreview:before {
-  color: #FFCC00 !important;
+  color: #fc0 !important;
 }
 
 .complete:before {
-  color: #2ECC40 !important;
+  color: #2ecc40 !important;
 }
 
 /*------------------------------------*\
@@ -401,8 +401,8 @@ span.sg-pattern-state:before {
   z-index: 0;
 }
 #sg-vp-wrap.wrap-animate {
-  -webkit-transition: left 0.3s ease-out;
-          transition: left 0.3s ease-out;
+  -webkit-transition: left .3s ease-out;
+          transition: left .3s ease-out;
 }
 
 #sg-viewport {
@@ -423,7 +423,8 @@ span.sg-pattern-state:before {
           transition: all 40s linear;
 }
 
-.no-resize #sg-cover, .no-resize #sg-rightpull-container {
+.no-resize #sg-cover,
+.no-resize #sg-rightpull-container {
   display: none;
 }
 .no-resize #sg-viewport {
@@ -478,12 +479,12 @@ span.sg-pattern-state:before {
 }
 
 .vp-animate {
-  -webkit-transition: width 0.8s ease-out;
-          transition: width 0.8s ease-out;
+  -webkit-transition: width .8s ease-out;
+          transition: width .8s ease-out;
 }
 
 /*------------------------------------*\
-    $PATTERN LAB CONTENT 
+    $PATTERN LAB CONTENT
 \*------------------------------------*/
 /* Section Pattern */
 .sg-pattern {
@@ -516,7 +517,7 @@ span.sg-pattern-state:before {
   bottom: -1px;
   right: 0;
   z-index: 1;
-  padding: 0.65em;
+  padding: .65em;
   line-height: 1;
   font-weight: normal;
   border: 1px solid #ddd;
@@ -566,7 +567,7 @@ span.sg-pattern-state:before {
 
 .sg-view-container {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   line-height: 1.4;
   font-size: 90%;
@@ -590,8 +591,8 @@ span.sg-pattern-state:before {
   padding: 0 1em;
 }
 .sg-view-container.anim-ready {
-  -webkit-transition: bottom 0.3s ease-out;
-          transition: bottom 0.3s ease-out;
+  -webkit-transition: bottom .3s ease-out;
+          transition: bottom .3s ease-out;
 }
 
 .sg-view-close {
@@ -612,7 +613,8 @@ span.sg-pattern-state:before {
   -webkit-box-shadow: 0 0 10px #808080;
           box-shadow: 0 0 10px #808080;
 }
-.has-annotation a, .has-annotation input {
+.has-annotation a,
+.has-annotation input {
   cursor: help !important;
 }
 .has-annotation:hover {
@@ -654,17 +656,19 @@ span.sg-pattern-state:before {
   margin-bottom: 0;
 }
 .sg-comment-container h2 {
-  margin-bottom: 0.25em;
+  margin-bottom: .25em;
 }
 
-.sg-code, .sg-annotations {
+.sg-code,
+.sg-annotations {
   clear: both;
   background: #ddd;
   color: #000;
   padding: 1em 0.5em;
   margin: 1em 0;
 }
-.sg-code a, .sg-annotations a {
+.sg-code a,
+.sg-annotations a {
   text-decoration: underline;
 }
 
@@ -684,7 +688,7 @@ span.sg-pattern-state:before {
   color: #808080;
 }
 .sg-code-contains code {
-  padding: 0.2em;
+  padding: .2em;
   background: rgba(0, 0, 0, 0.3);
   color: #999;
   position: relative;
@@ -789,7 +793,7 @@ div.clear {
 
 .tt-query {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .tt-hint {
@@ -800,11 +804,10 @@ div.clear {
   width: 422px;
   padding: 8px 0;
   background-color: #fff;
-  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-align: left;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tt-suggestion {
@@ -812,28 +815,40 @@ div.clear {
   font-size: 14px;
   line-height: 16px;
 }
-
 .tt-suggestion.tt-cursor {
   color: #fff;
   background-color: #0097cf;
 }
-
 .tt-suggestion p {
   margin: 0;
 }
 
 /*------------------------------------*\
-    $PATTERN LAB ICON FONTS 
+    $PATTERN LAB ICON FONTS
 \*------------------------------------*/
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?srsv7g");
-  src: url("../fonts/icomoon.eot?#iefixsrsv7g") format("embedded-opentype"), url("../fonts/icomoon.woff?srsv7g") format("woff"), url("../fonts/icomoon.ttf?srsv7g") format("truetype"), url("../fonts/icomoon.svg?srsv7g#icomoon") format("svg");
+  font-family: 'sg-icomoon';
+  src: url("../fonts/sg-icomoon.eot?srsv7g");
+  src: url("../fonts/sg-icomoon.eot?#iefixsrsv7g") format("embedded-opentype"), url("../fonts/sg-icomoon.woff?srsv7g") format("woff"), url("../fonts/sg-icomoon.ttf?srsv7g") format("truetype"), url("../fonts/sg-icomoon.svg?srsv7g#sg-icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-.sg-icon-search, .sg-icon-cog, .sg-icon-minus, .sg-icon-plus, .sg-icon-menu, .sg-icon-radio-checked, .sg-checkbox.active, .sg-icon-radio-unchecked, .sg-checkbox, .sg-icon-file, .sg-icon-link, .sg-icon-keyboard, .sg-icon-qrcode, .sg-icon-eye, .sg-checkbox {
-  font-family: 'icomoon';
+.sg-icon-search,
+.sg-icon-cog,
+.sg-icon-minus,
+.sg-icon-plus,
+.sg-icon-menu,
+.sg-icon-radio-checked,
+.sg-checkbox.active,
+.sg-icon-radio-unchecked,
+.sg-checkbox,
+.sg-icon-file,
+.sg-icon-link,
+.sg-icon-keyboard,
+.sg-icon-qrcode,
+.sg-icon-eye,
+.sg-checkbox {
+  font-family: 'sg-icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -846,48 +861,50 @@ div.clear {
 }
 
 .sg-icon-search:before {
-  content: "\e600";
+  content: '\e600';
   font-size: 85%;
 }
 
 .sg-icon-cog:before {
-  content: "\e601";
+  content: '\e601';
 }
 
 .sg-icon-minus:before {
-  content: "\e602";
+  content: '\e602';
 }
 
 .sg-icon-plus:before {
-  content: "\e603";
+  content: '\e603';
 }
 
 .sg-icon-menu:before {
-  content: "\e604";
+  content: '\e604';
 }
 
-.sg-icon-radio-checked:before, .sg-checkbox.active:before, .sg-checkbox.active:before {
-  content: "\e605";
+.sg-icon-radio-checked:before, .sg-checkbox.active:before,
+.sg-checkbox.active:before {
+  content: '\e605';
 }
 
-.sg-icon-radio-unchecked:before, .sg-checkbox:before, .sg-checkbox:before {
-  content: "\e606";
+.sg-icon-radio-unchecked:before, .sg-checkbox:before,
+.sg-checkbox:before {
+  content: '\e606';
 }
 
 .sg-icon-file:before {
-  content: "\e607";
+  content: '\e607';
 }
 
 .sg-icon-link:before {
-  content: "\e608";
+  content: '\e608';
 }
 
 .sg-icon-keyboard:before {
-  content: "\e609";
+  content: '\e609';
 }
 
 .sg-icon-eye:before {
-  content: "\e60b";
+  content: '\e60b';
 }
 
 /******************************************************************/
