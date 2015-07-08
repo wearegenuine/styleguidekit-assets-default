@@ -1,1 +1,1 @@
-passthru('pwd');
+passthru('echo pwd');
