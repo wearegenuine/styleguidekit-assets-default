@@ -29,16 +29,21 @@
 
   <!--Style Guide Header-->
   <header class="sg-header" role="banner">
-    <a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
-    <div class="sg-nav-container" id="sg-nav-container">
-      <ol class="sg-nav" id="pl-pattern-nav-target">
-        <!-- pattern lab nav will be inserted here -->
-      </ol>
-      <div class="sg-controls" id="sg-controls">
-        <!-- ish Controls will be inserted here -->
+    <div class="styleguide-controls">
+      <a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
+      <div class="sg-nav-container" id="sg-nav-container">
+        <ol class="sg-nav" id="pl-pattern-nav-target">
+          <!-- pattern lab nav will be inserted here -->
+        </ol>
+        <div class="sg-controls" id="sg-controls">
+          <!-- ish Controls will be inserted here -->
+        </div>
       </div>
     </div>
   </header>
+
+
+
   <!--End Style Guide Header-->
 
   <!-- iFrame -->
@@ -103,6 +108,8 @@
         <li class="sg-tools">
           <a href="#" class="sg-acc-handle sg-tools-toggle sg-icon sg-icon-cog" id="sg-tools-toggle" title="Tools"><span class="is-vishidden">Tools</span></a>
           <ul class="sg-acc-panel sg-right sg-checklist">
+            <li><a href="/docs/" id="sg-t-docs">Front-end Docs</a></li>
+
             {{^ ishControlsHide.views-annotations }}
             <li><a href="#" id="sg-t-annotations"><span class="sg-checkbox"></span>Annotations</a></li>
             {{/ ishControlsHide.views-annotations }} {{^ ishControlsHide.views-code }}
