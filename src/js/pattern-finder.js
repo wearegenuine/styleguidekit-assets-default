@@ -70,16 +70,15 @@ var patternFinder = {
 	
 	openFinder: function() {
 		patternFinder.active = true;
-		$('#sg-find .typeahead').val("");
-		$("#sg-find").addClass('show-overflow');
-		$('#sg-find .typeahead').focus();
+		// $('#sg-find .typeahead').val("");
+		// $("#sg-find").addClass('show-overflow');
+		// $('#sg-find .typeahead').focus();
 	},
 	
 	closeFinder: function() {
 		patternFinder.active = false;
-		$("#sg-find").removeClass('show-overflow');
-		$('.sg-acc-handle, .sg-acc-panel').removeClass('active');
-		$('#sg-find .typeahead').val("");
+		// $("#sg-find").removeClass('show-overflow');
+		// $('#sg-find .typeahead').val("");
 	},
 	
 	receiveIframeMessage: function(event) {
@@ -116,12 +115,4 @@ $('#sg-find .typeahead').focus(function() {
 
 $('#sg-find .typeahead').blur(function() {
 	patternFinder.closeFinder();
-});
-
-// jwerty stuff
-// toggle the annotations panel
-jwerty.key('ctrl+shift+f', function (e) {
-	$('.sg-find .sg-acc-handle, .sg-find .sg-acc-panel').addClass('active');
-	patternFinder.toggleFinder();
-	return false;
 });
