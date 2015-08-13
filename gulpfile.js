@@ -9,7 +9,6 @@ var gulpLoadPlugins    = require('gulp-load-plugins');
 var plugins            = gulpLoadPlugins({ scope: ['devDependencies'] });
 plugins.del            = require("del");
 plugins.mainBowerFiles = require("main-bower-files");
-plugins.pngcrush       = require('imagemin-pngcrush');
 
 /* clean tasks */
 gulp.task('clean:bower', function (cb) {
@@ -22,10 +21,6 @@ gulp.task('clean:css-patternlab', function (cb) {
 
 gulp.task('clean:css-custom', function (cb) {
   return plugins.del(['dist/css/custom/*'],cb);
-});
-
-gulp.task('clean:fonts', function (cb) {
-  return plugins.del(['dist/fonts/*'],cb);
 });
 
 gulp.task('clean:html', function (cb) {
@@ -71,19 +66,14 @@ gulp.task('build:css-custom', ['clean:css-custom'], function() {
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(plugins.minifyCss())
     .pipe(gulp.dest('dist/css/custom'))
-    .pipe(gulp.dest('../../../www/app/styleguide/css'));
-});
-
-gulp.task('build:fonts', ['clean:fonts'], function() {
-  return gulp.src('src/fonts/*')
-    .pipe(gulp.dest('dist/fonts'))
-    .pipe(gulp.dest('../../../www/dist/styleguide/fonts'));
+    .pipe(gulp.dest('../../../www/dist/styles'));
 });
 
 gulp.task('build:html', ['clean:html'], function() {
   return gulp.src('src/html/*')
     .pipe(gulp.dest('dist/html'))
-    .pipe(gulp.dest('../../../www/dist'))});
+    .pipe(gulp.dest('../../../www/dist'));
+});
 
 gulp.task('build:js-viewer', ['clean:js'], function() {
   return gulp.src(['src/js/*.js','!src/js/annotations-pattern.js','!src/js/code-pattern.js','!src/js/info-panel.js'])
@@ -113,14 +103,13 @@ gulp.task('build:js-pattern', ['build:js-viewer'], function() {
     .pipe(gulp.dest('../../../www/dist/styleguide/js'));
 });
 
-gulp.task('default', ['build:bower', 'build:css-custom', 'build:css-patternlab', 'build:fonts', 'build:html', 'build:js-pattern'], function () {
+gulp.task('default', ['build:bower', 'build:css-custom', 'build:css-patternlab', 'build:html', 'build:js-pattern'], function () {
 
   if (args.watch !== undefined) {
     gulp.watch(['src/bower_components/**/*'], ['build:bower']);
     gulp.watch(['src/css/prism-okaidia.css'],['build:css-general']);
     gulp.watch(['src/sass/styleguide.scss'], ['build:css-patternlab']);
     gulp.watch(['src/sass/styleguide-specific.scss'], ['build:css-custom']);
-    gulp.watch(['src/fonts/*'], ['build:fonts'])
     gulp.watch(['src/html/*'], ['build:html']);
     gulp.watch(['src/js/*'], ['build:js-pattern']);
   }
