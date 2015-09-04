@@ -283,24 +283,27 @@ var codeViewer = {
 
 		// get the file name of the pattern so we can get the various editions of the code that can show in code view
 		var fileName = urlHandler.getFileName(patternData.patternPartial);
+		
+		var ext = fileName.slice((Math.max(0, fileName.lastIndexOf(".")) || Infinity) + 1);
+		
 
 		// request the encoded markup version of the pattern
 		var e = new XMLHttpRequest();
 		e.onload = this.saveEncoded;
-		e.open("GET", fileName.replace(/\.html/,".escaped.html") + "?" + (new Date()).getTime(), true);
+		e.open("GET", fileName.replace(ext,"escaped." + ext) + "?" + (new Date()).getTime(), true);
 		e.send();
 
 		// request the mustache markup version of the pattern
 		var m = new XMLHttpRequest();
 		m.onload = this.saveMustache;
-		m.open("GET", fileName.replace(/\.html/,"."+patternData.patternExtension) + "?" + (new Date()).getTime(), true);
+		m.open("GET", fileName.replace(ext,patternData.patternExtension) + "?" + (new Date()).getTime(), true);
 		m.send();
 
 		// if css is enabled request the css for the pattern
 		if (patternData.cssEnabled) {
 			var c = new XMLHttpRequest();
 			c.onload = this.saveCSS;
-			c.open("GET", fileName.replace(/\.html/,".css") + "?" + (new Date()).getTime(), true);
+			c.open("GET", fileName.replace(ext,".css") + "?" + (new Date()).getTime(), true);
 			c.send();
 		}
 

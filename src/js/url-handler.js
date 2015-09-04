@@ -68,7 +68,7 @@ var urlHandler = {
 		if ((name.indexOf("viewall-") != -1) && (fileName !== "")) {
 			fileName = baseDir+"/"+fileName.replace(regex,"-")+"/index.html";
 		} else if (fileName !== "") {
-			fileName = baseDir+"/"+fileName.replace(regex,"-")+"/"+fileName.replace(regex,"-")+".html";
+			fileName = baseDir+"/"+fileName.replace(regex,"-")+"/"+fileName.replace(regex,"-")+config.outputExt;
 		}
 		
 		return fileName;
