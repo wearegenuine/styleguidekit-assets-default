@@ -1,5 +1,5 @@
 {
-	"name":             "pattern-lab/styleguidekit-assets-default",
+	"name":             "genuine/styleguidekit-assets-default",
 	"description":      "The assets for the default StyleguideKit for Pattern Lab. Contains styles and mark-up for Pattern Lab's front-end.",
 	"keywords":         ["mustache", "pattern lab", "styleguide"],
 	"homepage":         "http://patternlab.io",
@@ -31,20 +31,17 @@
 			"dist": {
 				"publicDir": [
 					{ "bower_components/*": "styleguide/bower_components/*" },
-					{ "css/patternlab/*": "styleguide/css/*" },
+					{ "css/*": "styleguide/css/*" },
 					{ "fonts/*": "styleguide/fonts/*" },
-					{ "html/index.html": "index.html" },
 					{ "images/*": "styleguide/images/*" },
+					{ "html/index.html": "index.html" },
 					{ "js/*": "styleguide/js/*" }
-				],
-				"sourceDir": [
-					{ "css/custom/*": "styleguide/css/*" }
 				]
 			},
 			"config": {
 				"ishMinimum": "240",
 				"ishMaximum": "2600",
-				"ishControlsHide": ["hay"]
+				"ishControlsHide": ["hay", "disco"]
 			}
 		}
 	}
