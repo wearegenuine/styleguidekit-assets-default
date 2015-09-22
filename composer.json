@@ -31,7 +31,7 @@
 			"dist": {
 				"publicDir": [
 					{ "bower_components/*": "styleguide/bower_components/*" },
-					{ "css/*": "styleguide/css/*" },
+					{ "css/*": "styleguide/css/patternlab/*" },
 					{ "fonts/*": "styleguide/fonts/*" },
 					{ "images/*": "styleguide/images/*" },
 					{ "html/index.html": "index.html" },
