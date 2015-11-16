@@ -24,7 +24,7 @@
 		"source":         "https://github.com/wearegenuine/styleguidekit-assets-default/releases"
 	},
 	"require": {
-		"pattern-lab/core": "dev-dev"
+		"pattern-lab/core": "dev-master"
 	},
 	"extra": {
 		"patternlab": {
