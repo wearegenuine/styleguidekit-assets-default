@@ -1,4 +1,11 @@
-node_modules/*
-src/bower_components/*
-.sass-cache/*
+bower_components
+node_modules
+vendor
+.sass-cache
+
 .DS_Store
+.DS_STORE
+ehthumbs.db
+Thumbs.db
+
+composer.lock
