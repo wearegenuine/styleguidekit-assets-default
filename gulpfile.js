@@ -50,7 +50,7 @@ gulp.task('build:css-general', function() {
     .pipe(plugins.rename({
       suffix: '.min'
     }))
-    .pipe(plugins.minifyCss())
+    .pipe(plugins.cssnano())
     .pipe(gulp.dest('dist/css/patternlab'));
     // .pipe(gulp.dest('../../../www/.tmp/styleguide/css'))
     // .pipe(gulp.dest('../../../www/dist/styleguide/css'));
@@ -70,7 +70,7 @@ gulp.task('build:css-patternlab', ['clean:css-patternlab', 'build:css-general'],
     .pipe(plugins.rename({
       suffix: '.min'
     }))
-    .pipe(plugins.minifyCss())
+    .pipe(plugins.cssnano())
     .pipe(gulp.dest('dist/css/patternlab'));
     // .pipe(gulp.dest('../../../www/.tmp/styleguide/css'))
     // .pipe(gulp.dest('../../../www/dist/styleguide/css'));
@@ -90,7 +90,7 @@ gulp.task('build:css-custom', ['clean:css-custom'], function() {
     .pipe(plugins.rename({
       suffix: '.min'
     }))
-    .pipe(plugins.minifyCss())
+    .pipe(plugins.cssnano())
     .pipe(gulp.dest('dist/css/custom'));
     // .pipe(gulp.dest('../../../www/.tmp/styles'))
     // .pipe(gulp.dest('../../../www/dist/styles'));
