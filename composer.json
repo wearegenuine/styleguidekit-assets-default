@@ -21,25 +21,27 @@
 	"support": {
 		"issues":         "https://github.com/pattern-lab/styleguidekit-assets-default/issues",
 		"wiki":           "http://patternlab.io/docs/",
-		"source":         "https://github.com/wearegenuine/styleguidekit-assets-default/releases"
+		"source":         "https://github.com/pattern-lab/styleguidekit-assets-default/releases"
 	},
 	"require": {
-		"pattern-lab/core": "dev-master"
+		"pattern-lab/core": "dev-dev"
 	},
 	"extra": {
 		"patternlab": {
 			"dist": {
 				"publicDir": [
 					{ "bower_components/*": "styleguide/bower_components/*" },
-					{ "css/*": "styleguide/css/patternlab/*" },
+					{ "css/patternlab/*": "styleguide/css/*" },
 					{ "fonts/*": "styleguide/fonts/*" },
-					
 					{ "html/index.html": "index.html" },
 					{ "js/*": "styleguide/js/*" }
+				],
+				"sourceDir": [
+					{ "css/custom/*": "styleguide/css/*" }
 				]
 			},
 			"config": {
-				"ishMinimum": "240",
+				"ishMinimum": "320",
 				"ishMaximum": "2600",
 				"ishControlsHide": ["hay", "disco"]
 			}
