@@ -4,7 +4,7 @@
   "description": "The default set of front-end assets for Pattern Lab.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pattern-lab/styleguidekit-assets-default.git"
+    "url": "git://github.com/wearegenuine/styleguidekit-assets-default.git"
   },
   "author": "Dave Olsen",
   "license": "MIT",
